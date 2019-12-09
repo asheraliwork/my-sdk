@@ -1,7 +1,10 @@
 package com.example.mysdk;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.dependentlibrary.DependentActivity;
+import com.example.dependentlibrary.LibTest;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -25,8 +28,7 @@ public class SDKActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "sdk activity", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(SDKActivity.this, DependentActivity.class));
             }
         });
     }
