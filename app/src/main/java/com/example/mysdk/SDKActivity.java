@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class SDKActivity extends AppCompatActivity {
 
@@ -24,6 +25,8 @@ public class SDKActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView tv = findViewById(R.id.tv);
+        tv.setText("This is sdk activity, tap on button for dependent library");
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
